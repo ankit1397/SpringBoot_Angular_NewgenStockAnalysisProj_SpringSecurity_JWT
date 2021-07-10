@@ -1,0 +1,28 @@
+<div id="app">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+    <a  routerLink="login" class="navbar-brand">STOCKAPP</a>
+
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Home </a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" routerLink="stockData">StockData</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

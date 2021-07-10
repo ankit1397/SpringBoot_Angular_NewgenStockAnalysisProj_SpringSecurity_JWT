@@ -1,0 +1,9 @@
+.myButton{
+    position: relative;
+    left: 65%;
+    top:  -56px;
+}
+
+.myChart{
+    padding: 10px;
+}
